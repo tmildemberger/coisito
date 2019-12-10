@@ -35,7 +35,10 @@ void Desnome::exec() {
         std::stringstream ss;
         ss << container.getComparisons();
         vec2f viewsize = graphics_.getViewSize();
-        graphics_.drawTextCentered(ss.str(), vec2f(viewsize.x / 2, viewsize . y / 4), 40);
+        graphics_.drawTextCentered(ss.str(), vec2f(viewsize.x / 2, viewsize.y / 4), 40);
+        ss.str("");
+        ss << static_cast<int>(1. / events_.getLastElapsedTime());
+        graphics_.drawTextCentered(ss.str(), vec2f(viewsize.x / 8, viewsize.y / 8), 40);
         container.draw();
         graphics_.display();
     }

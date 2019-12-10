@@ -29,6 +29,12 @@ bool VisibleContainer::lower(std::size_t ix1, std::size_t ix2) {
 
 void VisibleContainer::swap(std::size_t ix1, std::size_t ix2) {
     ++swaps;
+    things[ix1].setColor(40, 120, 80);
+    things[ix2].setColor(40, 120, 80);
+    std::this_thread::sleep_for(std::chrono::milliseconds(700));
+    things[ix1].setColor(40, 80, 120);
+    things[ix2].setColor(40, 80, 120);
+
     VisibleThing temp = things[ix1];
     things[ix1]       = things[ix2];
     things[ix2]       = temp;

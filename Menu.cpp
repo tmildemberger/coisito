@@ -15,7 +15,7 @@ Menu::Menu(Coisito& coisito, GraphicsManager& graphics, EventManager& events)
     graphics_.loadAsset("image.jpg");
     vec2f viewsize = graphics_.getViewSize();
     buttons.emplace_back(graphics_, vec2f(viewsize.x / 2, viewsize.y * 1 / 4), "Bubble Sort", 0);
-    buttons.emplace_back(graphics_, vec2f(viewsize.x / 2, viewsize.y * 2 / 4), "Bubble Sort", 1);
+    buttons.emplace_back(graphics_, vec2f(viewsize.x / 2, viewsize.y * 2 / 4), "Selection Sort", 1);
     buttons.emplace_back(graphics_, vec2f(viewsize.x / 2, viewsize.y * 3 / 4), "Exit", 2);
 }
 
